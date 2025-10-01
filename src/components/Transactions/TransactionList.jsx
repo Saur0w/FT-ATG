@@ -16,7 +16,6 @@ const TransactionList = () => {
             <div className="flex items-center justify-between mb-6">
                 <h2 className="text-2xl font-semibold">Transactions</h2>
 
-                {/* Filter */}
                 <select
                     value={filter}
                     onChange={(e) => dispatch(setFilter(e.target.value))}
