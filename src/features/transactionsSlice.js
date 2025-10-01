@@ -2,7 +2,7 @@ import { createSlice, nanoid } from '@reduxjs/toolkit';
 
 const initialState = {
     transactions: [],
-    filter: 'all', // 'all', 'income', 'expense'
+    filter: 'all',
 };
 
 const transactionsSlice = createSlice({
@@ -49,7 +49,6 @@ export const {
     setFilter
 } = transactionsSlice.actions;
 
-// Selectors
 export const selectAllTransactions = (state) => state.transactions.transactions;
 
 export const selectFilteredTransactions = (state) => {

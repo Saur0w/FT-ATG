@@ -1,8 +1,8 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
-    budgets: [], // { categoryId, amount, month, year }
-    monthlyGoal: 0, // Overall monthly budget goal
+    budgets: [],
+    monthlyGoal: 0,
 };
 
 const budgetSlice = createSlice({
@@ -35,7 +35,6 @@ const budgetSlice = createSlice({
 
 export const { setBudget, deleteBudget, setMonthlyGoal } = budgetSlice.actions;
 
-// Selectors
 export const selectBudgetForCategory = (state, categoryId, month, year) => {
     return state.budget.budgets.find(
         b => b.categoryId === categoryId && b.month === month && b.year === year

@@ -21,7 +21,6 @@ const currencySlice = createSlice({
 
 export const { setBaseCurrency, setSelectedCurrency } = currencySlice.actions;
 
-// Selectors
 export const selectBaseCurrency = (state) => state.currency.baseCurrency;
 export const selectSelectedCurrency = (state) => state.currency.selectedCurrency;
 export const selectSupportedCurrencies = (state) => state.currency.supportedCurrencies;

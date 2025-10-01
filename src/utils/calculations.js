@@ -1,11 +1,10 @@
-// Calculate total for a specific type of transactions
+
 export const calculateTotal = (transactions, type) => {
     return transactions
         .filter(t => t.type === type)
         .reduce((sum, t) => sum + t.amount, 0);
 };
 
-// Calculate spending by category
 export const calculateSpendingByCategory = (transactions, categories) => {
     const spending = {};
 
@@ -31,7 +30,6 @@ export const calculateSpendingByCategory = (transactions, categories) => {
     }).sort((a, b) => b.amount - a.amount);
 };
 
-// Calculate income by category
 export const calculateIncomeByCategory = (transactions, categories) => {
     const income = {};
 
@@ -57,25 +55,21 @@ export const calculateIncomeByCategory = (transactions, categories) => {
     }).sort((a, b) => b.amount - a.amount);
 };
 
-// Calculate budget progress
 export const calculateBudgetProgress = (spent, budget) => {
     if (budget === 0) return 0;
     return (spent / budget) * 100;
 };
 
-// Check if over budget
 export const isOverBudget = (spent, budget) => {
     return spent > budget;
 };
 
-// Calculate average transaction amount
 export const calculateAverageTransaction = (transactions) => {
     if (transactions.length === 0) return 0;
     const total = transactions.reduce((sum, t) => sum + t.amount, 0);
     return total / transactions.length;
 };
 
-// Get transactions for current month
 export const getCurrentMonthTransactions = (transactions) => {
     const now = new Date();
     const currentMonth = now.getMonth();
@@ -90,7 +84,6 @@ export const getCurrentMonthTransactions = (transactions) => {
     });
 };
 
-// Convert amount between currencies
 export const convertAmount = (amount, fromRate, toRate) => {
     if (!fromRate || !toRate) return amount;
     return (amount / fromRate) * toRate;
