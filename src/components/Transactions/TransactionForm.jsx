@@ -133,7 +133,7 @@ const TransactionForm = () => {
                                     </span>
                                 </div>
                                 <p className="text-xs text-gray-500 mt-2 text-right">
-                                    This amount will be saved in your base currency
+                                    This amount will be saved in the base currency
                                 </p>
                             </div>
                         )}
